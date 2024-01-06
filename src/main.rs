@@ -61,7 +61,10 @@ impl Stop {
     fn pango_real(&self) -> String {
         let local_time = self.real_date.with_timezone(&Paris);
         if self.is_delayed {
-            format!("<span foreground=\\\"green\\\">{local_time}</span>")
+            format!(
+                "<span foreground=\\\"green\\\">{}</span>",
+                local_time.format("%H:%M")
+            )
         } else {
             String::new()
         }
