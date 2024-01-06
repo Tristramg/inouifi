@@ -2,7 +2,7 @@
 
 Display information about your train (only inoui TGV): speed and stops (possibily with delay).
 
-This tool can be combined with other tools (I my case with [waybar](https://github.com/Alexays/Waybar)).
+This tool can be combined with other tools (in my case with [waybar](https://github.com/Alexays/Waybar)).
 
 It requires to be connected to the train’s wifi.
 
@@ -25,9 +25,9 @@ Copy it somewhere in your path (personnaly, I use ~/Apps):
 
 ## Usage
 
-The executable has three commands
+The executable has four commands
 
-`inouifi connected`: display whether  you are connected to the train wifi. Returns 0 if connected, 1 otherwise. Use `--quite` to only have the return code.
+`inouifi connected`: display whether you are connected to the train wifi. Returns 0 if connected, 1 otherwise. Use `--quite` to only have the return code.
 
 `inouifi speed`: display your current speed. Use `--no-unit` if you just want the value in km/h.
 
@@ -54,4 +54,4 @@ Here is way waybar configuration:
 
 ## Disclaimer
 
-I was coded on one trip and hasn’t be really tested in the wild. Feedback welcome!
+It was coded on one trip and hasn’t be really tested in the wild. Feedback welcome!

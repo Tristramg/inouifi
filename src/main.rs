@@ -207,7 +207,7 @@ fn display_speed(no_units: bool) -> i32 {
             0
         }
         _ => {
-            eprintln!("Could fetch the speed, are you connected to the train’s wifi?");
+            eprintln!("Could not fetch the speed, are you connected to the train’s wifi?");
             3
         }
     }
