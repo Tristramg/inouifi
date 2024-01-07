@@ -27,7 +27,7 @@ Copy it somewhere in your path (personnaly, I use ~/Apps):
 
 The executable has four commands
 
-`inouifi connected`: display whether you are connected to the train wifi. Returns 0 if connected, 1 otherwise. Use `--quite` to only have the return code.
+`inouifi connected`: display whether you are connected to the train wifi. Returns 0 if connected, 1 otherwise. Use `--quiet` to only have the return code.
 
 `inouifi speed`: display your current speed. Use `--no-unit` if you just want the value in km/h.
 
