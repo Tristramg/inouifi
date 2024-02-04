@@ -186,6 +186,11 @@ fn pango_format() -> i32 {
             println!("{str}");
             0
         }
+        (Ok(speed), _) => {
+            let str = format!(r#"{{"text": "{speed}", "tooltip": "Could not get train details"}}"#);
+            println!("{str}");
+            0
+        }
         _ => 5,
     }
 }
@@ -217,9 +222,7 @@ fn display_speed(no_units: bool) -> i32 {
 }
 
 fn trip() -> Result<Trip> {
-    let r = reqwest::blocking::get("https://wifi.sncf/router/api/train/details")?
-        .json::<Trip>()
-        .unwrap();
+    let r = reqwest::blocking::get("https://wifi.sncf/router/api/train/details")?.json::<Trip>()?;
     Ok(r)
 }
 
